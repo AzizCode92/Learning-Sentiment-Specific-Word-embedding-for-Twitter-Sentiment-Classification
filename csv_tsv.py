@@ -14,6 +14,7 @@ with open(inputFileName) as csvfile :
 
     for row in readCSV:
 
+
         if (row[0]=="0"):
             row[0]= "negative"
         elif (row[0]=="4"):
@@ -32,7 +33,7 @@ with open(inputFileName) as csvfile :
         del(row[2])
         row[1]= str(randint(11111111, 99999999))
 
-
-        print "\t".join(row)
+        print '\t'.join(str(p) for p in row)
+        #print "\t".join(row)
 
 
