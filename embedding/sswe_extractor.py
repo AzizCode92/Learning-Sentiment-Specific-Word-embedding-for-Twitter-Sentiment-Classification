@@ -4,17 +4,6 @@ import logging
 import numpy as np
 from ConfigParser import ConfigParser
 from itertools import chain
-
-# allow executing from anywhere without installing the package
-import sys
-import os
-import distutils.util
-
-builddir = os.path.dirname(os.path.realpath(__file__)) + '/../build/lib.'
-libdir = builddir + distutils.util.get_platform() + '-' + '.'.join(map(str, sys.version_info[:2]))
-# sys.path.append(libdir)
-sys.path.insert(0, libdir)
-
 # local
 from deepnl import *
 from deepnl.extractors import *
